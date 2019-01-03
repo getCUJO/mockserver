@@ -253,13 +253,17 @@ public class ActionHandler {
     }
 
     private void returnNotFound(ResponseWriter responseWriter, HttpRequest request) {
-        HttpResponse response = notFoundResponse();
+        HttpResponse response = customNotFoundResponse();
         if (request.getHeaders().containsEntry("x-forwarded-by", "MockServer")) {
             response.withHeader("x-forwarded-by", "MockServer");
         } else {
             httpStateHandler.log(new RequestLogEntry(request));
-            mockServerLogger.info(EXPECTATION_NOT_MATCHED, request, "no expectation for:{}returning response:{}", request, notFoundResponse());
+            mockServerLogger.info(EXPECTATION_NOT_MATCHED, request, "no expectation for:{}returning response:{}", request, customNotFoundResponse());
         }
         responseWriter.writeResponse(request, response, false);
+    }
+
+    private static HttpResponse customNotFoundResponse() {
+        return HttpResponse.response("No handler found for this endpoint");
     }
 }
