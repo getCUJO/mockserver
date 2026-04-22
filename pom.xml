@@ -61,10 +61,10 @@
         <netty.version>4.1.32.Final</netty.version>
         <httpcomponents.version>4.4.1</httpcomponents.version>
         <boucycastle.verion>1.60</boucycastle.verion>
-        <spring.version>4.3.18.RELEASE</spring.version>
+        <spring.version>6.2.17</spring.version>
         <skipTests>false</skipTests>
-        <release.arguments />
-        <javadoc.additional.parameters />
+        <release.arguments/>
+        <javadoc.additional.parameters/>
     </properties>
 
     <modules>
