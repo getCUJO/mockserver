@@ -57,14 +57,14 @@
         <jetty.version>9.2.26.v20180806</jetty.version>
         <slf4j.version>1.7.25</slf4j.version>
         <tomcat.version>8.0.53</tomcat.version>
-        <jackson.version>2.9.7</jackson.version>
+        <jackson.version>2.9.9.1</jackson.version>
         <netty.version>4.1.32.Final</netty.version>
         <httpcomponents.version>4.4.1</httpcomponents.version>
         <boucycastle.verion>1.60</boucycastle.verion>
         <spring.version>4.3.18.RELEASE</spring.version>
         <skipTests>false</skipTests>
-        <release.arguments />
-        <javadoc.additional.parameters />
+        <release.arguments/>
+        <javadoc.additional.parameters/>
     </properties>
 
     <modules>
